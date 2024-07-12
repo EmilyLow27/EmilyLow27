@@ -67,7 +67,7 @@ class VRButton {
 		style.innerHTML = `
 			@keyframes pound {
 				0%, 100% { transform: scale(1); }
-				50% { transform: scale(10.10); }
+				50% { transform: scale(5.5); }
 			}
 		`;
 		document.head.appendChild(style);
