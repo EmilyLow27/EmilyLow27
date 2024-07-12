@@ -6,7 +6,7 @@ class LoadingBar {
 		this.domElement.style.left = '0';
 		this.domElement.style.width = '100%';
 		this.domElement.style.height = '100%';
-		this.domElement.style.background = '#000';
+		this.domElement.style.background = '#000'; // New background color
 		this.domElement.style.opacity = '0.7';
 		this.domElement.style.display = 'flex';
 		this.domElement.style.alignItems = 'center';
@@ -32,13 +32,13 @@ class LoadingBar {
 
 		function onprogress(delta) {
 			const progress = delta * 100;
-			loader.progressBar.style.width = ${ progress }%;
+			loader.progressBar.style.width = `${progress}%`;
 		}
 	}
 
 	set progress(delta) {
 		const percent = delta * 100;
-		this.progressBar.style.width = ${ percent }%;
+		this.progressBar.style.width = `${percent}%`;
 	}
 
 	set visible(value) {
