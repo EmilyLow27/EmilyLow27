@@ -18,7 +18,7 @@ class App{
 		this.assetsPath = './assets/';
         
 		this.camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.01, 500 );
-		this.camera.position.set( 0, 180, 0 );
+		this.camera.position.set( 0, 1.6, 0 );
         
         this.dolly = new THREE.Object3D(  );
         this.dolly.position.set(0, 0, 10);
@@ -264,7 +264,7 @@ class App{
 		}
 		
         //cast left
-        dir.set(-1,0,0);
+        dir.set(-1,180,0);
         dir.applyMatrix4(this.dolly.matrix);
         dir.normalize();
         this.raycaster.set(pos, dir);
