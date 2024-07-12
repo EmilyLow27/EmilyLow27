@@ -7,7 +7,7 @@ class LoadingBar{
 		this.domElement.style.width = '100%';
 		this.domElement.style.height = '100%';
 		this.domElement.style.background = '##0000FF';
-		this.domElement.style.opacity = '0.7';
+		this.domElement.style.opacity = '0.0';
 		this.domElement.style.display = 'flex';
 		this.domElement.style.alignItems = 'center';
 		this.domElement.style.justifyContent = 'center';
