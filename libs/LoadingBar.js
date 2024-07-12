@@ -32,7 +32,7 @@ class LoadingBar {
 
 		function onprogress(delta) {
 			const progress = delta * 100;
-			loader.progressBar.style.width = '${progress}%';
+			loader.progressBar.style.width = `${progress}%`;
 		}
 	}
 
