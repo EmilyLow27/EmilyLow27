@@ -57,7 +57,7 @@ class CanvasUI{
         if (body.fontFamily === undefined) body.fontFamily = "Arial";
         if (body.padding === undefined) body.padding = 20;
         if (body.fontSize === undefined) body.fontSize = 30;
-        if (body.backgroundColor === undefined) body.backgroundColor = '#000';
+        if (body.backgroundColor === undefined) body.backgroundColor = '#ADD8E6';
         if (body.fontColor === undefined) body.fontColor = '#fff';
         
         Object.entries( this.config ).forEach( ( [ name, value]) => {
