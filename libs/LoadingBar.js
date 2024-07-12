@@ -6,12 +6,13 @@ class LoadingBar {
 		this.domElement.style.left = '0';
 		this.domElement.style.width = '100%';
 		this.domElement.style.height = '100%';
-		this.domElement.style.background = '#000'; // New background color
+		this.domElement.style.background = '#000';
 		this.domElement.style.opacity = '0.7';
 		this.domElement.style.display = 'flex';
 		this.domElement.style.alignItems = 'center';
 		this.domElement.style.justifyContent = 'center';
 		this.domElement.style.zIndex = '1111';
+
 		const barBase = document.createElement("div");
 		barBase.style.background = '#FF0000';
 		barBase.style.width = '50%';
@@ -19,21 +20,18 @@ class LoadingBar {
 		barBase.style.borderRadius = '10px';
 		barBase.style.height = '15px';
 		this.domElement.appendChild(barBase);
+
 		const bar = document.createElement("div");
 		bar.style.background = '#22a';
 		bar.style.width = '50%';
 		bar.style.borderRadius = '10px';
 		bar.style.height = '100%';
 		bar.style.width = '0';
+		bar.style.transition = 'width 0.5s ease'; // Add transition for animation
 		barBase.appendChild(bar);
 		this.progressBar = bar;
 
 		document.body.appendChild(this.domElement);
-
-		function onprogress(delta) {
-			const progress = delta * 100;
-			loader.progressBar.style.width = `${progress}%`;
-		}
 	}
 
 	set progress(delta) {
