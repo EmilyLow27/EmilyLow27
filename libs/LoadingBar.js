@@ -6,12 +6,13 @@ class LoadingBar {
 		this.domElement.style.left = '0';
 		this.domElement.style.width = '100%';
 		this.domElement.style.height = '100%';
-		this.domElement.style.background = '#ADD8E6'; // New background color
+		this.domElement.style.background = '#ADD8E6'; // Light blue background color
 		this.domElement.style.opacity = '0.7';
 		this.domElement.style.display = 'flex';
 		this.domElement.style.alignItems = 'center';
 		this.domElement.style.justifyContent = 'center';
 		this.domElement.style.zIndex = '1111';
+
 		const barBase = document.createElement("div");
 		barBase.style.background = '#aaa';
 		barBase.style.width = '50%';
@@ -19,6 +20,7 @@ class LoadingBar {
 		barBase.style.borderRadius = '10px';
 		barBase.style.height = '15px';
 		this.domElement.appendChild(barBase);
+
 		const bar = document.createElement("div");
 		bar.style.background = '#22a';
 		bar.style.width = '50%';
@@ -29,11 +31,6 @@ class LoadingBar {
 		this.progressBar = bar;
 
 		document.body.appendChild(this.domElement);
-
-		function onprogress(delta) {
-			const progress = delta * 100;
-			loader.progressBar.style.width = `${progress}%`;
-		}
 	}
 
 	set progress(delta) {
@@ -42,11 +39,7 @@ class LoadingBar {
 	}
 
 	set visible(value) {
-		if (value) {
-			this.domElement.style.display = 'flex';
-		} else {
-			this.domElement.style.display = 'none';
-		}
+		this.domElement.style.display = value ? 'flex' : 'none';
 	}
 }
 
